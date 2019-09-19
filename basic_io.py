@@ -5,16 +5,6 @@ joystick_x = 20
 joystick_y = 21
 button = 12
 
-# Joystick
-GPIO.setup(joystick_x, GPIO.IN)
-GPIO.setup(joystick_y, GPIO.IN)
-
-# Switch
-GPIO.setup(switch, GPIO.IN)
-
-# Button
-GPIO.setup(button, GPIO.IN)
-
 def set_op():
 	if GPIO.input(switch):
 		return '*'
