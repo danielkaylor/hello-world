@@ -26,6 +26,8 @@ def set_op():
 		return '/'
 
 if __name__ == '__main__':
+	
+	GPIO.setmode(GPIO.BCM)
 
 	# Joystick
 	GPIO.setup(joystick_x, GPIO.IN)
