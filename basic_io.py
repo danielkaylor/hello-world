@@ -31,6 +31,7 @@ if __name__ == '__main__':
 	GPIO.setup(button, GPIO.IN)
 
 	while True:
+		time.sleep(3)
 		time.sleep(.5)
 		if GPIO.input(switch):
 			print(GPIO.input(joystick_x))
