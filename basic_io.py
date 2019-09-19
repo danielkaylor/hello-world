@@ -1,4 +1,5 @@
 import RPi.GPIO as GPIO
+import time
 
 switch = 7
 joystick_x = 20
@@ -16,7 +17,7 @@ def set_op():
 		return '/'
 
 if __name__ == '__main__':
-	
+
 	GPIO.setmode(GPIO.BCM)
 
 	# Joystick
@@ -30,6 +31,7 @@ if __name__ == '__main__':
 	GPIO.setup(button, GPIO.IN)
 
 	while True:
+		time.sleep(.5)
 		if GPIO.input(switch):
 			print(GPIO.input(joystick_x))
 		else:
