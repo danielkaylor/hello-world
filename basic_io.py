@@ -27,6 +27,16 @@ def set_op():
 
 if __name__ == '__main__':
 
+	# Joystick
+	GPIO.setup(joystick_x, GPIO.IN)
+	GPIO.setup(joystick_y, GPIO.IN)
+
+	# Switch
+	GPIO.setup(switch, GPIO.IN)
+
+	# Button
+	GPIO.setup(button, GPIO.IN)
+
 	while True:
 		if GPIO.input(switch):
 			print(GPIO.input(joystick_x))
